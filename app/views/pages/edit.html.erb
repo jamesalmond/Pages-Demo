@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="span8">
+    <h1><%= @page.name %></h1>
+    <% @page.page_elements.each do |element| %>
+      <%= render_page_element(element) %>
+    <% end %>
+  </div>
+  <div class="span4">
+    <div class="well">
+      <%= link_to new_page_element_path(@page, :type => "text"), :class => "btn" do %>
+        <i class="icon-plus"></i> New text section
+      <% end -%>
+      <%= link_to new_page_element_path(@page, :type => "image"), :class => "btn" do %>
+        <i class="icon-plus"></i> New image section
+      <% end -%>
+      <%= link_to new_page_element_path(@page, :type => "double_image"), :class => "btn" do %>
+        <i class="icon-plus"></i> New double image section
+      <% end -%>
+    </div>
+  </div>
+</div>
+

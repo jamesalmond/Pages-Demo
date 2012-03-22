@@ -1,0 +1,7 @@
+<h1>New Page</h1>
+
+<%= form_for @page, :html => {:class => "well"} do |f| -%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create page", :class => "btn" -%>
+<% end -%>

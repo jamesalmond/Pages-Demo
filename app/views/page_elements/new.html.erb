@@ -1,0 +1,5 @@
+<%= form_for @element, :as => :element,  :url => page_elements_path(@page, :type => params[:type]), :html => {:class => "well", :multi_part => true} do |f| -%>
+  <%= page_element_fields_for(@element, f) -%>
+  <%= f.submit "Add element", :class => "btn" -%>
+<% end -%>
+
