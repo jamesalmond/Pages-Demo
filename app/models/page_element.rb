@@ -4,6 +4,6 @@ class PageElement
   timestamps!
 
   def self.build(element_type, attributes = {})
-    "#{element_type.capitalize}Element".constantize.new(attributes)
+    "#{element_type.camelize}Element".constantize.new(attributes)
   end    
 end
